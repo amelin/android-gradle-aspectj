@@ -6,10 +6,6 @@ plugins {
     `kotlin-dsl`
 }
 
-apply {
-    plugin("com.jfrog.bintray")
-}
-
 group = "com.archinamon"
 version = "3.3.0-kotlin-fix"
 

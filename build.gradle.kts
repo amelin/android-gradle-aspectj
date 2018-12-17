@@ -7,7 +7,6 @@ buildscript {
     val kotlinVersion: String by extra
     dependencies {
         classpath(kotlin("gradle-plugin", kotlinVersion))
-        classpath("com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3")
     }
 }
 
