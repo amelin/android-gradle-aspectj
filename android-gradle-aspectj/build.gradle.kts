@@ -56,6 +56,12 @@ val androidGradleVersion: String by extra
 val kotlinVersion: String by extra
 val aspectjVersion: String by extra
 
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+
 dependencies {
     compile(kotlin("stdlib-jdk8", kotlinVersion))
     compileOnly(gradleApi())
