@@ -4,6 +4,7 @@ import groovy.util.logging.Slf4j
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
@@ -16,6 +17,7 @@ import java.io.File
  * @author archinamon on 11/04/17.
  */
 @Slf4j
+@Ignore
 class AndroidPluginTest {
 
     private val rootTestDir = File("build/unitTests")
