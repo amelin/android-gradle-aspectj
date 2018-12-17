@@ -1,4 +1,3 @@
-import com.jfrog.bintray.gradle.BintrayExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.util.Date
 
@@ -73,25 +72,6 @@ dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M3")
     testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0-M1")
     testCompile(kotlin("test-junit", kotlinVersion))
-}
-
-if (project.hasProperty("user") && project.hasProperty("apiKey")) {
-    configure<BintrayExtension> {
-        user = project.properties["user"].toString()
-        key = project.properties["apiKey"].toString()
-        setConfigurations("archives")
-        pkg.apply {
-            repo = "maven"
-            name = "android-gradle-aspectj"
-            vcsUrl = "https://github.com/Archinamon/GradleAspectJ-Android"
-            setLicenses("Apache-2.0")
-            publish = true
-            version.apply {
-                name = project.version.toString()
-                released = Date().toString()
-            }
-        }
-    }
 }
 
 tasks.withType<KotlinCompile> {
