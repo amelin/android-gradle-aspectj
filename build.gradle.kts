@@ -11,6 +11,10 @@ buildscript {
     }
 }
 
+plugins {
+    `java-gradle-plugin`
+}
+
 allprojects {
     repositories {
         google()
@@ -19,4 +23,10 @@ allprojects {
         maven { url = uri("http://repository.jetbrains.com/utils") }
         maven { url = uri("https://dl.bintray.com/archinamon/maven") }
     }
+}
+
+val androidGradleVersion: String by extra
+
+dependencies {
+    compile("com.android.tools.build:gradle:$androidGradleVersion")
 }
